@@ -1,0 +1,40 @@
+
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+
+import math
+
+dataset = pd.read_csv("klikniecia.csv")
+
+R= 39
+d=5
+photo_selected=[]
+number_of_selection= [0]*d
+sum_of_rew = [0]*d
+total_reward=0
+for r in range (0,R):
+    max_upper_b=0
+    photo=0
+    for i in range (0,d):
+        if (number_of_selection[i]>0):
+            average_rew=sum_of_rew[i]/number_of_selection[i]
+            delta_i=math.sqrt(3/2*math.log(r+1)/number_of_selection[i])
+            upper_bound= average_rew + delta_i
+        else:
+            upper_bound=1e400
+        if max_upper_b < upper_bound:
+            max_upper_b=upper_bound
+            photo=i
+    photo_selected.append(photo)
+    number_of_selection[photo]= number_of_selection[photo]+1
+    reward = dataset.values[r, photo]
+    sum_of_rew[photo] = sum_of_rew[photo] + reward
+    total_reward = total_reward + reward
+
+
+plt.hist(photo_selected)
+plt.title("Histogram of photo selections")
+plt.xlabel("zdjecie")
+plt.ylabel("ilosc klikniec")
+plt.show()
