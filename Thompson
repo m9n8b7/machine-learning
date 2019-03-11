@@ -1,0 +1,36 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+
+import random
+
+dataset = pd.read_csv("klikniecia.csv")
+
+R= 39
+d=5
+photo_selected=[]
+numbers_of_reward_1=[0]*d
+numbers_of_reward_0=[0]*d
+total_reward=0
+for r in range (0,R):
+    max_random=0
+    photo=0
+    for i in range (0,d):
+        random_beta = random.betavariate(numbers_of_reward_1[i]+1, numbers_of_reward_0[i]+1)
+        if random_beta> max_random:
+           max_random = random_beta
+           photo=i
+    photo_selected.append(photo)  
+    reward = dataset.values[r, photo]
+    if reward==1:
+        numbers_of_reward_1[photo]=numbers_of_reward_1[photo]+1
+    else:
+        numbers_of_reward_0[photo]=numbers_of_reward_0[photo]+1
+    total_reward = total_reward + reward
+
+# Visualising the results
+plt.hist(photo_selected)
+plt.title("Histogram of photo selections")
+plt.xlabel("zdjecie")
+plt.ylabel("ilosc klikniec")
+plt.show()
