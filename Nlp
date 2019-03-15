@@ -1,0 +1,48 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+import nltk
+import re
+dataset=pd.read_csv("opinie_o_ag.tsv", delimiter="\t", quoting =3)
+
+from nltk.corpus import stopwords
+from nltk.stem.porter import PorterStemmer
+ps = PorterStemmer()
+"""nltk.download('stopwords')"""#only for the first time
+#probably this is not pythonic way, but is working :)  
+corpus=[]
+for i in range (0,27):
+    X=dataset["review"][i]
+    X=X.lower()
+    X=X.replace("ł","l")
+    X=X.replace("ą","a")
+    X=X.replace("ć","c")
+    X=X.replace("ę", "e")
+    X=X.replace("ń","n")
+    X=X.replace("ó", "o")
+    X=X.replace("ś", "s")
+    X=X.replace("ź", "z")
+    X=X.replace("ż", "z")
+    X = re.sub('[^a-zA-Z]', ' ', X)
+    review = X.split()
+    review =[ps.stem(word) for word in review if not word in set(stopwords.words('polski'))]
+#szukam  dobrych, polskich stopword, ten uzupełniam sama
+    review=" ".join(review)
+    corpus.append(review)
+
+from sklearn.feature_extraction.text import CountVectorizer
+cv=CountVectorizer(max_features=100)
+word_bag=cv.fit_transform(corpus).toarray()
+y= dataset.iloc[:,1].values
+
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test=train_test_split(word_bag,y, test_size=0.2)
+
+from sklearn.naive_bayes import GaussianNB
+classifier= GaussianNB()
+classifier.fit(X_train, y_train)
+
+y_pred=classifier.predict(X_test)
+
+from sklearn.metrics import confusion_matrix
+cm=confusion_matrix(y_test, y_pred)
