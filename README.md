@@ -5,8 +5,9 @@
 * [Setup](#setup)
 
 ## General info
-This project are two simple regressions:Linear regression and polynomial regression.
-It predicts the price per square meter based on the size of the flat.
+This pro
+It provides for the price of a flat based on: location, size, number of rooms, floor.ject is mulitiply regression.
+
 	
 ## Technologies
 Project is created with:
