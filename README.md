@@ -5,7 +5,7 @@
 * [Setup](#setup)
 
 ## General info
-This project are two simple regressions:Linear regression and polynomial regression.
+This projects are two simple regressions:Linear regression and polynomial regression.
 It predicts the price per square meter based on the size of the flat.
 	
 ## Technologies
