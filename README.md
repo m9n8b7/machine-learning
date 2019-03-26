@@ -3,7 +3,7 @@
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
-* [Index] (#index)
+* [Index](#index)
 
 ## General info
 This is a few projects created for a fictitious real estate agency. 
