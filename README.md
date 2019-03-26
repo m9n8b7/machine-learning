@@ -11,7 +11,8 @@ It provides for the price of a flat based on: location, size, number of rooms, f
 	
 ## Technologies
 Project is created with:
-* Python 3.7 with Pandas and Matplotlib
+* Python 3.7 with Pandas, NumPy and Matplotlib
+* SciKit
 	
 ## Setup
 To run this project, install library or run it in Anacolda (eg Spyder).
