@@ -5,9 +5,8 @@
 * [Setup](#setup)
 
 ## General info
-This pro
-It provides for the price of a flat based on: location, size, number of rooms, floor. Contains: mulitiply regression, decision tree, random forest.
 
+classifies flats as requiring renovation or not Contains: logistic regression, K-nearest neighbors, kernel SVM, Naive Bayes, decision tree and random forest,
 	
 ## Technologies
 Project is created with:
