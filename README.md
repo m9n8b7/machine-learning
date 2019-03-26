@@ -6,7 +6,7 @@
 
 ## General info
 This pro
-It provides for the price of a flat based on: location, size, number of rooms, floor.ject is mulitiply regression.
+It provides for the price of a flat based on: location, size, number of rooms, floor. Contains: mulitiply regression, decision tree, random forest.
 
 	
 ## Technologies
