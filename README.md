@@ -21,10 +21,13 @@ To run this project You need Python 3.7 with installed libraries or you can use 
 Remember to put a data file in the folder.
 
 ## Index
-* regression: linear and polynomial regression
-* multiply regression: multiply regression, decision tree, random forest
-* classifiaction: logistic regression, K-nearest neighbors, kernel SVM, Naive Bayes, decision tree and random forest
-* clutstering: k-means, hierarchical clustering
-* apriori
+* regression: linear and polynomial regression,
+* multiply regression: multiply regression, decision tree, random forest,
+* classifiaction: logistic regression, K-nearest neighbors, kernel SVM, Naive Bayes, decision tree and random forest,
+* clutstering: k-means, hierarchical clustering,
+* apriori,
 * reinforcement: upper confidence bound, Thompson sampling
-* NLP: based on 
+* NLP: based on Naive Bayes and KNN,
+* Deep learning: WIP
+* dimencionality reduction: PCA, LDA, kernel PCA,
+
