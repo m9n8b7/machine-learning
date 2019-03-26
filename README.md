@@ -10,7 +10,8 @@ It predicts the price per square meter based on the size of the flat.
 	
 ## Technologies
 Project is created with:
-* Python 3.7 with Pandas and Matplotlib
+* Python 3.7 with Pandas, NumPy and Matplotlib
+* scikit
 	
 ## Setup
 To run this project, install library or run it in Anacolda (eg Spyder).
