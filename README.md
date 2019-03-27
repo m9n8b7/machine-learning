@@ -17,7 +17,7 @@ Project is usualy created with:
 
 ## Setup
 To run this project You need Python 3.7 with installed libraries or you can use Anaconda (Spyder or Jupyter).
-You may also need polish stopword list.
+You may also need polish stopword list. In NLTK there is no polish stop words list, You have to add it. You don't beed to download NLTK every time You run program.
 Remember to put a data file in the folder.
 
 
