@@ -12,7 +12,7 @@ Both moels require interact with the client who clicks on the photos. The csv fi
 
 ## Technologies
 Project is usualy created with:
-* Python 3.7, Pandas, NumPy, Matplotlib,Math
+* Python 3.7, Pandas, NumPy, Matplotlib, Math, Random
 
 ## Setup
 To run this project You need Python 3.7 with installed libraries or you can use Anaconda (Spyder or Jupyter).
