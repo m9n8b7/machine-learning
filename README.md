@@ -6,28 +6,19 @@
 * [Index](#index)
 
 ## General info
-This is a few projects created for a fictitious real estate agency. 
-The agency does not exist, but the data is mostly real and comes from sites dedicated to real estate.
-Each set of programs has its own redme.
+
+The programs allows you to reduce the number of variables.
+How did I prepare a dataset?
+I used the flat.csv file (the same as for the multiply reduction) and segmented the flat (with K-means).
+Unfortunately, the predictability of the program (PCA) is unsatisfactory. I'm working on it. Most likely, the problem lies in clustering.
+
 ## Technologies
 Project is usualy created with:
 * Python 3.7, Pandas, NumPy, Matplotlib,
 * SciKit
 
-if it is different, it is written in redme
-
 ## Setup
 To run this project You need Python 3.7 with installed libraries or you can use Anaconda (Spyder or Jupyter).
 Remember to put a data file in the folder.
 
-## Index
-* regression: linear and polynomial regression,
-* multiply regression: multiply regression, decision tree, random forest,
-* classifiaction: logistic regression, K-nearest neighbors, kernel SVM, Naive Bayes, decision tree and random forest,
-* clutstering: k-means, hierarchical clustering,
-* apriori,
-* reinforcement: upper confidence bound, Thompson sampling
-* NLP: based on Naive Bayes and KNN,
-* Deep learning: WIP
-* dimencionality reduction: PCA, LDA, kernel PCA,
 
